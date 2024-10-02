@@ -6,7 +6,6 @@ app.config.from_object(Config)
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
-    print("hola mundo")
     return render_template('Login.html')
 
 
