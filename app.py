@@ -8,6 +8,9 @@ app.config.from_object(Config)
 def login():
     return render_template('Login.html')
 
+@app.route('/registrarse', methods=['GET', 'POST'])
+def registrarse():
+    return render_template('registrarse.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
