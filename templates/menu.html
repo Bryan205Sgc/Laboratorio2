@@ -21,28 +21,51 @@
             <!-- List Box para Rol Asignado -->
             <span class="input-span">
                 <label for="rol" class="label">Rol Asignado</label>
-                <select id="rol" class="input" required>
+                <select id="rol" class="input" required onchange="togglePermisos()">
                     <option value="">Selecciona un Rol</option>
+                    <option value="add">Nuevo rol</option>
                     <option value="admin">Administrador</option>
                     <option value="user">Usuario</option>
                     <option value="guest">Invitado</option>
                 </select>
             </span>
 
-            <!-- List Box para Permisos -->
-            <span class="input-span">
-                <label for="permiso" class="label">Permisos</label>
-                <select id="permiso" class="input" required>
-                    <option value="">Selecciona un Permiso</option>
-                    <option value="create">Crear</option>
-                    <option value="edit">Editar</option>
-                    <option value="delete">Eliminar</option>
-                    <option value="view">Visualizar</option>
-                </select>
-            </span>
-
+            <!-- Contenedor específico para los Checkboxes -->
+            <div id="permisos-container" style="display: none;">
+                <p class="form-check-label">Permisos</p>
+                <div class="checkbox-container">
+                    <div class="form-check">
+                        <input type="checkbox" id="create" class="form-check-input">
+                        <label for="create" class="form-check-label">Crear</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="edit" class="form-check-input">
+                        <label for="edit" class="form-check-label">Editar</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="delete" class="form-check-input">
+                        <label for="delete" class="form-check-label">Eliminar</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="view" class="form-check-input">
+                        <label for="view" class="form-check-label">Visualizar</label>
+                    </div>
+                </div>
+            </div>
             <input class="submit" type="submit" value="Enviar" />
         </form>
     </div>
+
+    <script>
+        function togglePermisos() {
+            const rolSelect = document.getElementById('rol');
+            const permisosContainer = document.getElementById('permisos-container');
+            if (rolSelect.value === 'add') {
+                permisosContainer.style.display = 'block';
+            } else {
+                permisosContainer.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

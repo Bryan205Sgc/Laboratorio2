@@ -94,3 +94,34 @@ body {
     background-color: var(--clr);
     color: black;
 }
+
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column; /* Alinear los checkboxes en columna */
+    align-items: flex-start; /* Alinear a la izquierda */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    color: var(--bg-light); /* Color de texto */
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    color: inherit; /* Hereda el color del contenedor */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    width: 100%;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: var(--clr);
+}
+
+.form-check-label {
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
