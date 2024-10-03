@@ -100,7 +100,7 @@ body {
     display: flex;
     flex-direction: column; /* Alinear los checkboxes en columna */
     align-items: flex-start; /* Alinear a la izquierda */
-    width: 100%; 
+    width: 100%;
     color: var(--bg-light); /* Color de texto */
 }
 
