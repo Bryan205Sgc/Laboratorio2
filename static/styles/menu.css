@@ -39,7 +39,7 @@ body {
 }
 
 .title {
-    font-size: 28px;
+    font-size: 60px;
     color: var(--clr);
     font-weight: 600;
     letter-spacing: -1px;
@@ -98,17 +98,17 @@ body {
 
 .checkbox-container {
     display: flex;
-    flex-direction: column; /* Alinear los checkboxes en columna */
-    align-items: flex-start; /* Alinear a la izquierda */
+    flex-direction: column;
+    justify-items: left;
     width: 100%;
-    color: var(--bg-light); /* Color de texto */
+    color: var(--bg-light);
 }
 
 .form-check {
     display: flex;
     align-items: center;
-    color: inherit; /* Hereda el color del contenedor */
-    justify-content: flex-start; /* Alinear a la izquierda */
+    color: inherit;
+    justify-content: flex-start;
     width: 100%;
 }
 
