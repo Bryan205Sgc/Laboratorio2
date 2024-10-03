@@ -21,62 +21,54 @@ body {
     align-items: center;
 }
 
-.form {
-  --bg-light: #efefef;
-  --bg-dark: #707070;
-  --clr: #58bc82;
-  --clr-alpha: #9c9c9c60;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 350px;
-  background-color: #212121;
-  padding: 20px;
-  border-radius: 20px;
-  position: relative;
-}
-
 .title {
-  font-size: 28px;
-  color: var(--clr);
-  font-weight: 600;
-  letter-spacing: -1px;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-
-.message, .signin {
-  color: var(--bg-light);
-  font-size: 14px;
-}
-
-.signin {
-  text-align: center;
-}
-
-.signin a {
-  color: var(--clr);
-}
-
-.signin a:hover {
-  text-decoration: underline var(--clr);
+    font-size: 60px;
+    color: var(--clr);
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+    width: 100%;
 }
 
 .flex {
-  display: flex;
-  width: 100%;
-  gap: 6px;
+    display: flex;
+    width: 100%;
+    gap: 20px;
 }
 
-.form label {
-  position: relative;
+.flex .input-span {
+    width: 100%;
 }
 
-.form label .input {
-  border-radius: 0.5rem;
-    padding: 1rem 0.75rem;
+.form {
+    --bg-light: #efefef;
+    --bg-dark: #707070;
+    --clr: #58bc82;
+    --clr-alpha: #9c9c9c60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    background-color: #212121;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.form .input-span {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--bg-light);
+}
+
+.form input[type="text"],
+.form input[type="password"] {
+    border-radius: 0.5rem;
+    padding: 1.2rem 1rem;
     width: 100%;
     border: none;
     display: flex;
@@ -85,38 +77,26 @@ body {
     background-color: var(--clr-alpha);
     outline: 2px solid var(--bg-dark);
     color: white;
+    font-size: 1rem;
 }
 
-.form label .input + span {
-  position: absolute;
-  left: 10px;
-  top: 15px;
-  color: grey;
-  font-size: 0.9em;
-  cursor: text;
-  transition: 0.3s ease;
+.form input[type="text"]:focus,
+.form input[type="password"]:focus {
+    outline: 2px solid var(--clr);
 }
 
-.form label .input:placeholder-shown + span {
-  top: 15px;
-  font-size: 0.9em;
-}
-
-.form label .input:focus + span,.form label .input:valid + span {
-  top: 30px;
-  font-size: 0.7em;
-  font-weight: 600;
-}
-
-.form label .input:valid + span {
-  co
-lor: green;
+.label {
+    align-self: flex-start;
+    color: var(--clr);
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .submit {
-    padding: 1rem 0.75rem;
+    padding: 1.2rem;
     width: 100%;
     display: flex;
+    align-items: center;
     gap: 0.5rem;
     border-radius: 3rem;
     background-color: var(--bg-dark);
@@ -125,12 +105,20 @@ lor: green;
     cursor: pointer;
     transition: all 300ms;
     font-weight: 600;
-    font-size: 0.9rem;
-    font-color: white;
-    justify-content: center;
+    font-size: 1.2rem;
 }
 
 .submit:hover {
     background-color: var(--clr);
     color: black;
+}
+
+.signin {
+    text-decoration: none;
+    color: var(--bg-dark);
+    font-size: 1rem;
+}
+
+.signin a {
+    color: var(--clr);
 }

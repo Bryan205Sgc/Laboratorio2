@@ -12,5 +12,9 @@ def login():
 def registrarse():
     return render_template('registrarse.html')
 
+@app.route('/menu', methods=['GET','POST'])
+def menu():
+    return render_template('menu.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

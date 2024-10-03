@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/menu.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form class="form">
+            <p class="title">Menú Principal</p>
+
+            <span class="input-span">
+                <label for="username" class="label">Nombre del Usuario</label>
+                <input type="text" id="username" class="input" required>
+            </span>
+
+            <!-- List Box para Rol Asignado -->
+            <span class="input-span">
+                <label for="rol" class="label">Rol Asignado</label>
+                <select id="rol" class="input" required>
+                    <option value="">Selecciona un Rol</option>
+                    <option value="admin">Administrador</option>
+                    <option value="user">Usuario</option>
+                    <option value="guest">Invitado</option>
+                </select>
+            </span>
+
+            <!-- List Box para Permisos -->
+            <span class="input-span">
+                <label for="permiso" class="label">Permisos</label>
+                <select id="permiso" class="input" required>
+                    <option value="">Selecciona un Permiso</option>
+                    <option value="create">Crear</option>
+                    <option value="edit">Editar</option>
+                    <option value="delete">Eliminar</option>
+                    <option value="view">Visualizar</option>
+                </select>
+            </span>
+
+            <input class="submit" type="submit" value="Enviar" />
+        </form>
+    </div>
+</body>
+</html>

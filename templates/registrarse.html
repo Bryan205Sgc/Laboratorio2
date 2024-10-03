@@ -11,26 +11,32 @@
 <body>
     <div class="container">
         <form class="form">
-            <p class="title">Registrarse </p>
+            <p class="title">Registrarse</p>
 
-                <div class="flex">
-                <label>
-                    <input required="" placeholder="Nombre" type="text" class="input">
-                </label>
+            <div class="flex">
+                <span class="input-span">
+                    <label for="nombre" class="label">Nombre</label>
+                    <input type="text" id="nombre" class="input" required>
+                </span>
 
-                <label>
-                    <input required="" placeholder="Apellidos" type="text" class="input">
-                </label>
+                <span class="input-span">
+                    <label for="apellidos" class="label">Apellidos</label>
+                    <input type="text" id="apellidos" class="input" required>
+                </span>
             </div>
 
-            <label>
-                <input required="" placeholder="Contraseña" type="password" class="input">
-            </label>
-            <label>
-                <input required="" placeholder="Confirmar contraseña" type="password" class="input">
-            </label>
-            <button class="submit">Registrarse</button>
-            <p class="signin">¿Ya tienes una cuenta? <a href="/">Iniciar Sesión</a> </p>
+            <span class="input-span">
+                <label for="password" class="label">Contraseña</label>
+                <input type="password" id="password" class="input" required>
+            </span>
+
+            <span class="input-span">
+                <label for="confirm-password" class="label">Confirmar contraseña</label>
+                <input type="password" id="confirm-password" class="input" required>
+            </span>
+
+            <input class="submit" type="submit" value="Registrarse" />
+            <span class="signin">¿Ya tienes una cuenta? <a href="/">Iniciar Sesión</a></span>
         </form>
     </div>
 </body>
