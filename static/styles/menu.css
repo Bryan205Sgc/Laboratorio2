@@ -96,32 +96,23 @@ body {
 }
 
 
-.checkbox-container {
+
+#permisos-container {
     display: flex;
     flex-direction: column;
-    justify-items: left;
-    width: 100%;
+    gap: 1rem;
     color: var(--bg-light);
 }
 
-.form-check {
+#permisos-container div {
     display: flex;
-    align-items: center;
-    color: inherit;
-    justify-content: flex-start;
-    width: 100%;
+    align-items: center; /* Alinea el checkbox con el texto */
+    gap: 10px; /* Añade espacio entre el checkbox y el texto */
 }
 
-.form-check-input {
+#permisos-container input[type="checkbox"] {
     width: 20px;
     height: 20px;
     margin-right: 10px;
     accent-color: var(--clr);
-}
-
-.form-check-label {
-    color: var(--clr);
-    font-weight: 400;
-    font-size: 0.9rem;
-    margin-left: 10px;
 }
