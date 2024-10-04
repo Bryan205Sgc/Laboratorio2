@@ -3,12 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Usuario</title>
+    <title>Productos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/menu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/productos.css') }}">
 </head>
 <body>
-
+    <div class="container mt-4">
+        <a href="{{ url_for('agregar_producto') }}" class="btn btn-warning float-right">Agregar Producto</a>
+        <div class="mt-5">
+            <h2>Datos de Productos</h2>
+            <table class="table table-striped table-bordered mt-3 text-center align-middle">
+                <thead>
+                    <tr>
+                        <th class="text-warning">ID Producto</th>
+                        <th class="text-warning">Producto</th>
+                        <th class="text-warning">Precio</th>
+                        <th class="text-warning">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dato quemado (opcional) -->
+                    <tr>
+                        <td class="text-warning">1</td>
+                        <td class="text-warning">Producto Ejemplo</td>
+                        <td class="text-warning">$10.00</td>
+                        <td>
+                            <a href="#" class="btn btn-warning">Modificar</a>
+                            <a href="#" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% for producto in productos %}
+                    <tr>
+                        <td class="text-warning">{{ producto.idproducto }}</td>
+                        <td class="text-warning">{{ producto.producto }}</td>
+                        <td class="text-warning">{{ producto.precio }}</td>
+                        <td>
+                            <a href="{{ url_for('modificar_producto', id=producto.idproducto) }}" class="btn btn-warning">Modificar</a>
+                            <a href="{{ url_for('eliminar_producto', id=producto.idproducto) }}" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

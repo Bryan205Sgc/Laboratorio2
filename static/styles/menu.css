@@ -61,7 +61,6 @@ body {
     font-size: 1rem;
 }
 
-/* Estilos para los input y select */
 .input {
     border-radius: 0.5rem;
     padding: 1.2rem 1rem;
@@ -106,8 +105,8 @@ body {
 
 #permisos-container div {
     display: flex;
-    align-items: center; /* Alinea el checkbox con el texto */
-    gap: 10px; /* Añade espacio entre el checkbox y el texto */
+    align-items: center;
+    gap: 10px;
 }
 
 #permisos-container input[type="checkbox"] {
